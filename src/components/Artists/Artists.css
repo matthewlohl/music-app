@@ -1,0 +1,16 @@
+img{
+    border-radius: 20px;
+    width: 200px;
+    margin-right: 3em;
+}
+
+.album-cover{
+    display: flex;
+    margin-left: 1em;
+    margin-right: 3em;
+}
+
+p{
+    font-weight: bold;
+    font-size: 25px;
+}
