@@ -4,13 +4,15 @@ import './style.css'
 
 function Header() {
     
+    const activeClass = (({isActive}) => isActive ? 'active' : undefined)
+
   return (
     <header>
         <p className="logo">♫</p>
     <ul>
-        <NavLink to='/' end className='nav'>Home</NavLink>
-        <NavLink to='artists' className='nav'>Artists</NavLink>
-        <NavLink to='about' className='nav'>About</NavLink>
+        <NavLink to='/' end className={[activeClass && "nav"]}>Home</NavLink>
+        <NavLink to='artists' className={[activeClass && "nav"]}>Artists</NavLink>
+        <NavLink to='about' className={[activeClass && "nav"]}>About</NavLink>
     </ul>
     </header>
 

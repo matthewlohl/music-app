@@ -1,8 +1,11 @@
 import React from "react";
+import './style.css'
 
 function Footer() {
   return (
-   <h1>Footer</h1>
+    <footer className="footer">
+        <p>My Favourite Artists 2022</p>
+    </footer>
   );
 }
 
