@@ -1,0 +1,22 @@
+.nav{
+    text-decoration: none;
+    color: #eee;
+    
+}
+
+header{
+    margin: 2em 5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    color: #C3F8FF;
+}
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3em;
+}
+
