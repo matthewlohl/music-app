@@ -1,7 +1,7 @@
 import React from "react";
 import './Artists.css'
 import { FaveButton } from "../FaveButton";
-const Artists = (props) => {
+const Albums = (props) => {
     return (
         <div className="album-cover">
             <img src={props.img} alt={props.alt} className="album-cover"/>
@@ -14,4 +14,4 @@ const Artists = (props) => {
     )
 }
 
-export default Artists;
+export default Albums;
