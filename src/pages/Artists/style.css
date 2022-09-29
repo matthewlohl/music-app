@@ -1,0 +1,30 @@
+.link{
+    color: #eee;
+    text-decoration: none;
+    text-align: center;
+}
+
+.link:hover{
+    color: #ABD9FF;
+}
+
+.artists-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img{
+    border-radius: 100%;
+    margin-bottom: 2em;
+    margin-left: 2em;
+}
+
+#text{
+    text-align: center;
+}
