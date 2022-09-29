@@ -17,6 +17,7 @@ const Songs = (props) => {
             }
           }
           fetchSongs()
+          // eslint-disable-next-line react-hooks/exhaustive-deps
         }, [])
     
     const renderSongs = selectedSongs.map((song) => <li>{song.strTrack}</li>)

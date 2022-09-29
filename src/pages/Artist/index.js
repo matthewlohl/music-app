@@ -6,7 +6,8 @@ import './style.css'
 
 
 const Artist = () => {
-  const params = useParams()
+  const [selectedAlbums, setSelectedAlbums] = useState([])
+  var params = useParams()
   const artist = params.artist
   console.log(artist)
   
@@ -15,13 +16,10 @@ const Artist = () => {
     {id: 111611 ,name: 'EdSheeran'}
   ];
 
-  const artistOutput = artistList.find(({name}) => name === artist)
-  const artistID = artistOutput.id
-  console.log(artistID)
-
-    
-  const [selectedAlbums, setSelectedAlbums] = useState([])
   useEffect( () => {
+    const artistOutput = artistList.find(({name}) => name === artist)
+    const artistID = artistOutput.id
+    console.log(artistID)
     console.log(`Running use effect`)
     const fetchAlbum = async() => {
       try {
@@ -34,7 +32,7 @@ const Artist = () => {
       }
     }
     fetchAlbum();
-    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
  
