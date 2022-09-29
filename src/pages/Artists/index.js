@@ -1,26 +1,20 @@
 import React from "react";
-import { Albums, Songs } from "../../components";
+import { Link } from 'react-router-dom'
 import './style.css'
 
-import red_album from './img/red-album.png'
-import divide_album from './img/divide_cover.png'
-
 function Artists() {
-    const songs = ['State of Grace', 'Red', 'I Wish You Were Trouble', '22', 'All Too Well']
-
   return (
-    <main className='main'>
-      <div className="card">
-            <Albums artist='Taylor Swift' name='Red' img={red_album} alt='Red Cover' />
-            {/* <Songs songs={['State of Grace', 'Red', 'I Wish You Were Trouble', '22', 'All Too Well']}/> */}
-            <Songs songs={songs}/>
-      </div>
+    <div class="artists-div">
+        <div class="icons">
+          <Link to="TaylorSwift" className="link"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Taylor_Swift_-_Red_%28Taylor%27s_Version%29.png/220px-Taylor_Swift_-_Red_%28Taylor%27s_Version%29.png"></img><p>Taylor Swift</p></Link>
+        </div>
 
-      <div className="card">
-            <Albums artist='Ed Sheeran' name='Divide' img={divide_album} alt='Divide Cover' />
-            {/* <Songs /> */}
-      </div>
-    </main>
+        <div class="icons">
+          <Link to="EdSheeran" className="link"><img src="https://pyxis.nymag.com/v1/imgs/355/d36/80481e05a3fccbc54f5e22b2517905c700-12-ed-sheeran-review.rsquare.w700.jpg"></img><p>Ed Sheeran</p></Link>
+        </div>
+        
+      
+    </div>
   );
 }
 

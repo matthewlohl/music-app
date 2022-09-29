@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { Header, Footer } from './layout'
-import { Home , Artists, About, NotFound} from './pages'
+import { Home , Artists, Artist, About, NotFound} from './pages'
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -19,6 +19,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Home />}></Route>
       <Route path='artists' element={<Artists />}></Route>
+      <Route path='artists/:artist' element={<Artist />}></Route>
       <Route path='about' element={<About />}></Route>
       <Route path='*' element={<NotFound />}></Route>
     </Routes>

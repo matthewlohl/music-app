@@ -1,13 +1,30 @@
-.card{
-    border-radius: 10px;
-    box-shadow: 5px 5px 20px gray;
-    padding: 1.5em 0em;
-    margin: 2em;
+.link{
+    color: #eee;
+    text-decoration: none;
+    text-align: center;
 }
 
+.link:hover{
+    color: #ABD9FF;
+}
 
-.main{
+.artists-div{
     display: flex;
     flex-wrap: wrap;
+}
+
+.icons{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+img{
+    border-radius: 100%;
+    margin-bottom: 2em;
+    margin-left: 2em;
+}
+
+#text{
+    text-align: center;
 }

@@ -1,0 +1,13 @@
+.card{
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px gray;
+    padding: 4em 2em;
+    margin: 2em;
+}
+
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
