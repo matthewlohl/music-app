@@ -27,8 +27,8 @@ const Artist = () => {
       try {
         console.log(`grabbing from API`)
         
-        const data = await axios.get(`https://theaudiodb.com/api/v1/json/2/album.php?i=${artistID}`)
-        setSelectedAlbums(data.data.album.reverse())
+        const albumData = await axios.get(`https://theaudiodb.com/api/v1/json/2/album.php?i=${artistID}`)
+        setSelectedAlbums(albumData.data.album.reverse())
       } catch (error) {
         console.log(error)
       }
@@ -36,12 +36,14 @@ const Artist = () => {
     fetchAlbum();
     
   },[])
+  
+ 
 
   const renderAlbums = selectedAlbums.map((album, index) => {
     return(
       <div className="card">
-        <Albums key={album.idAlbum} artist={album.strArtist} name={album.strAlbum} img={album.strAlbumThumb} alt={album.strAlbum} />
-        
+        <Albums key={album.idAlbum} artist={album.strArtist} name={album.strAlbum} img={album.strAlbumThumb} alt={album.strAlbum} releaseYear={album.intYearReleased} genre={album.strStyle ? album.strStyle : undefined} />
+        <Songs albumId={album.idAlbum}/>
       </div>
     )
   })
